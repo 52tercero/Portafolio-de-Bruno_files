@@ -1,0 +1,207 @@
+﻿<!doctype html>
+<!-- 
+  Portfolio Personal - HTML5 Semántico
+  Estructura: header, nav, main, sections, articles, footer
+  Accesibilidad: ARIA labels, semantic HTML5, WCAG compliance
+-->
+<html lang="es">
+  <head>
+    <!-- Meta etiquetas HTML5 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio personal de Bruno Delgado. Proyectos, formación y contacto.">
+    <meta name="author" content="Bruno Delgado">
+    <meta name="theme-color" content="#6c63ff">
+    <title>Bruno Delgado — Portfolio Personal</title>
+    <!-- Preconectar a Google Fonts para mejor rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente externa (Inter) desde Google Fonts en múltiples pesos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- HEADER: Encabezado semántico con marca y navegación principal -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <!-- Marca con logo y nombre -->
+        <div class="brand">
+          <div class="logo" aria-hidden="true">BD</div>
+          <div>
+            <div style="font-weight:700">Bruno Delgado</div>
+            <div style="font-size:.85rem;color:var(--muted)">Desarrollador web junior</div>
+          </div>
+        </div>
+
+        <!-- Navegación principal con botón de hamburguesa para móvil -->
+        <nav aria-label="Navegación principal" class="primary-nav" role="navigation">
+          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú" type="button">☰</button>
+          <ul id="primary-nav" class="nav-list">
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#education">Formación</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL: Elemento semántico <main> para el contenido principal -->
+    <main role="main">
+      <!-- SECCIÓN HERO: Presentación principal con imagen -->
+      <section class="hero container" id="home">
+        <div class="hero-text">
+          <h1>Bruno Delgado</h1>
+          <h2>Estudiante de ASIR en ThePower Academy</h2>
+          <p class="lead">Creo páginas web accesibles, limpias y con atención al detalle. Este portfolio muestra mis proyectos, formación y formas de contacto.</p>
+          <!-- Botón de llamada a la acción -->
+          <p class="cta"><a href="#projects">Ver proyectos</a></p>
+        </div>
+        <div class="hero-image">
+          <img src="img/avatar.jpg" alt="Avatar de Bruno Delgado" loading="lazy" width="420" height="420">
+        </div>
+      </section>
+
+      <!-- SECCIÓN: Sobre mí con habilidades destacadas -->
+      <section id="about" class="container about" aria-labelledby="about-heading">
+        <h2 id="about-heading">Sobre mí</h2>
+        <p>Soy estudiante apasionado por el desarrollo web. Me interesa crear páginas bien estructuradas, semánticas y responsivas usando HTML5 y CSS. Busco mejorar constantemente mis habilidades y participar en proyectos prácticos.</p>
+        <!-- Logos de habilidades -->
+        <div class="skill-logos" role="list" aria-label="Habilidades">
+          <img class="skill-logo" src="img/logo-html5.png" alt="Logo HTML5" role="listitem" width="64" height="64">
+          <img class="skill-logo" src="img/logo-css3.jpeg" alt="Logo CSS3" role="listitem" width="64" height="64">
+          <img class="skill-logo" src="img/logo-javascript.png" alt="Logo javascript" role="listitem" width="64" height="64">
+          <img class="skill-logo" src="img/logo-python.png" alt="Logo Accesibilidad" role="listitem" width="64" height="64">
+        </div>
+      </section>
+
+      <!-- SECCIÓN: Formación académica y cursos -->
+      <section id="education" class="container education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Formación</h2>
+        <ul>
+          <li><strong>Título o curso:</strong> Primer ciclo licenciatura Ciencias Químicas Universidad de La Laguna. (2002-2005).
+          COU y Bachiller Instituto de Educación Secundaria San Diego de Alcalá, Puerto del Rosario (1997).
+          Estudios Primarios (EGB) Colegio Bernabé Figueroa Umpiérrez, Corralejo (1991).
+          </li>
+          <li><strong>Otros cursos:</strong> Curso de Guía e Intérprete homologado por el ICFEM, 500 horas (1997).</li>
+        </ul>
+        <!-- Enlace a CV en PDF con atributo download -->
+        <p>Descargar CV: <a href="curriculum.docx" download="Bruno_Delgado_CV">Enlace al CV (DOCX)</a></p>
+      </section>
+
+      <!-- SECCIÓN: Proyectos destacados con grid responsivo -->
+      <section id="projects" class="container projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Proyectos</h2>
+        <!-- Grid de 3 columnas que se adapta a 2 en tablet y 1 en móvil -->
+        <div class="projects-grid" role="list">
+          <!-- Proyecto 1: Sitio personal -->
+          <article class="project" role="listitem">
+            <img src="img/site personal.jpg" alt="Captura de pantalla del Proyecto 1 - Sitio personal" loading="lazy" width="800" height="400">
+            <div class="project-body">
+              <h3>Proyecto 1 — Sitio personal</h3>
+              <p>Site estático con perfil, blog y showcase. Tecnologías: HTML5, CSS, diseño responsivo.</p>
+              <!-- Botones de acción -->
+              <div class="links" role="group" aria-label="Enlaces del proyecto">
+                <a class="btn btn-primary" href="https://portafolio-brunodelgado.netlify.app/" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                <a class="btn btn-outline" href="https://github.com/52tercero/Mi-Proyecto-Html-CSS" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: Guía turística -->
+          <article class="project" role="listitem">
+            <img src="img/landing page.jpg" alt="Captura de pantalla del Proyecto 2 - Guía Turística" loading="lazy" width="800" height="400">
+            <div class="project-body">
+              <h3>Proyecto 2 — Guía Turística Automatizada</h3>
+              <p>Sitio web turístico informativo que funciona como una guía digital de Fuerteventura, estructurado en secciones de contenido, con páginas de turismo, noticias locales y recursos prácticos para visitantes y residentes.</p>
+              <div class="links" role="group" aria-label="Enlaces del proyecto">
+                <a class="btn btn-primary" href="https://thisisfuerteventura.es" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                <a class="btn btn-outline" href="https://github.com/52tercero/Thisisfuerteventura1" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Galería -->
+          <article class="project" role="listitem">
+            <img src="img/galeria grid.jpg" alt="Captura de pantalla del Proyecto 3 - Galería" loading="lazy" width="800" height="400">
+            <div class="project-body">
+              <h3>Proyecto 3 — Galería</h3>
+              <p>Galería con grid responsivo y accesibilidad básica (alt en imágenes).</p>
+              <div class="links" role="group" aria-label="Enlaces del proyecto">
+                <a class="btn btn-primary" href="https://example.com" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                <a class="btn btn-outline" href="#">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: Formulario de contacto -->
+      <section id="contact" class="container contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contacto</h2>
+        <p>Puedes contactarme por correo o rellenando el formulario a continuación.</p>
+        <!-- Enlaces de contacto directo -->
+        <ul role="list" aria-label="Métodos de contacto">
+          <li role="listitem">Email: <a href="mailto:52tercero@gmail.com">52tercero@gmail.com</a></li>
+          <li role="listitem">LinkedIn: <a href="https://www.linkedin.com/feed/?shareActive=true&shareUrl=https%3A%2F%2Facademy.hackthebox.com%2Fachievement%2F2225953%2F293" target="_blank" rel="noopener noreferrer">perfil</a></li>
+        </ul>
+
+        <!-- Formulario con validación HTML5 -->
+        <form action="#" method="post" class="contact-form" aria-label="Formulario de contacto" novalidate>
+          <fieldset>
+            <legend class="visually-hidden">Formulario de contacto</legend>
+            
+            <label for="name">Nombre <span aria-label="requerido">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Tu nombre">
+
+            <label for="email">Correo <span aria-label="requerido">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@email.com">
+
+            <label for="message">Mensaje <span aria-label="requerido">*</span></label>
+            <textarea id="message" name="message" rows="6" required placeholder="Tu mensaje aquí..." maxlength="500"></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA: Footer semántico con información -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>&copy; 2026 Bruno Delgado — Portfolio personal</p>
+        <!-- Enlaces a redes sociales -->
+        <nav aria-label="Enlaces a redes sociales">
+          <p style="margin:.5rem 0;color:var(--muted)">Sígueme: <a href="https://github.com/52tercero?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://www.linkedin.com/feed/?shareActive=true&shareUrl=https%3A%2F%2Facademy.hackthebox.com%2Fachievement%2F2225953%2F293" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- SCRIPT: Menú móvil interactivo -->
+    <script>
+      // Menú móvil accesible: alterna la visibilidad de la lista de navegación
+      (function () {
+        const btn = document.querySelector('.nav-toggle');
+        const nav = document.getElementById('primary-nav');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          const newState = !expanded;
+          btn.setAttribute('aria-expanded', String(newState));
+          btn.setAttribute('aria-label', newState ? 'Cerrar menú' : 'Abrir menú');
+          nav.classList.toggle('open');
+        });
+        // Cerrar menú al hacer clic fuera (mejora UX)
+        document.addEventListener('click', (e) => {
+          const target = e.target;
+          if (!nav.contains(target) && !btn.contains(target)) {
+            nav.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.setAttribute('aria-label', 'Abrir menú');
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

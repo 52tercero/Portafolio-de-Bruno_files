@@ -1,0 +1,153 @@
+﻿/* ========================================
+   PORTFOLIO PERSONAL - HOJA DE ESTILOS CSS
+   Diseño profesional, responsivo y dinámico
+   ======================================== */
+
+/* VARIABLES CSS: Paleta de colores global */
+:root{
+  /* Nueva paleta llamativa: magenta, cian eléctrico y dorado */
+  --bg: #fff8ff; /* fondo cálido y claro */
+  --card: #ffffff;
+  --accent: #ff007a; /* magenta vibrante */
+  --accent-2: #00d4ff; /* cian eléctrico */
+  --accent-3: #ffd166; /* dorado cálido */
+  --muted: #5b5b6b;
+  --text: #071028; /* texto oscuro para buen contraste */
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+/* Estilos base del documento */
+body{
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin:0;
+  color:var(--text);
+  /* Fondo: gradiente lineal + degradados radiales para profundidad */
+  background:
+    radial-gradient(circle at 10% 20%, rgba(108,99,255,0.04), transparent 8%),
+    radial-gradient(circle at 90% 80%, rgba(0,194,168,0.03), transparent 10%),
+    linear-gradient(180deg,#eef4fb 0%,var(--bg) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Contenedor principal: ancho máximo y centrado */
+.container{max-width:1100px;margin:0 auto;padding:1.25rem;text-align:center}
+
+/* Quitar puntos de listas por defecto y reset de padding/margin */
+ul{list-style:none;margin:0;padding:0}
+/* Mantener separación entre items en listas de contenido */
+.container ul li{margin-bottom:.5rem}
+
+/* ===== ENCABEZADO ===== */
+.site-header{background:transparent;padding-top:1rem}
+ .header-inner{display:flex;align-items:center;justify-content:center;padding:.5rem 0;gap:1.25rem;flex-wrap:wrap}
+/* Marca con logo y nombre/título */
+.brand{display:flex;align-items:center;gap:.75rem}
+.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));background-image:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 50%,var(--accent-3) 100%);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 8px 20px rgba(108,99,255,0.12)}
+/* Lista de navegación horizontal */
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+.nav-list a{color:var(--text);text-decoration:none;padding:.4rem .6rem;border-radius:6px;font-weight:600}
+.nav-list a:hover{background:rgba(15,76,129,0.06);color:var(--accent)}
+
+/* Botón de menú para pantallas pequeñas (oculto en desktop) */
+.nav-toggle{display:none;background:none;border:1px solid rgba(15,76,129,0.06);padding:.35rem .6rem;border-radius:8px;font-size:1.05rem;cursor:pointer}
+
+
+/* ===== SECCIÓN HERO ===== */
+.hero{display:flex;gap:2rem;align-items:center;padding:2.4rem 1rem}
+.hero-text{flex:1;text-align:center}
+.hero h2{font-size:1.9rem;margin:0 0 .5rem;line-height:1.05}
+.hero p.lead{color:var(--muted);margin:0 0 1rem}
+/* Botón de llamada a la acción con gradiente y hover animado */
+.cta a{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 8px 24px rgba(108,99,255,0.12);transition:transform .18s ease,box-shadow .18s ease}
+.cta a:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(0,194,168,0.12)}
+
+/* Enlaces globales: color dinámico y hover */
+a{color:var(--accent-2);text-decoration:none;transition:color .12s ease}
+a:hover{color:var(--accent-3);text-decoration:underline}
+
+/* Decorative underline for section titles */
+.section-title h3{position:relative;padding-bottom:.25rem}
+.section-title h3::after{content:"";display:block;height:4px;width:60px;margin:.5rem auto 0;border-radius:6px;background:linear-gradient(90deg,var(--accent),var(--accent-2));}
+.hero-image{width:180px;flex-shrink:0;margin:0 auto}
+.hero-image img{width:100%;height:100%;border-radius:16px;object-fit:cover;box-shadow:0 10px 30px rgba(13,40,62,0.12)}
+
+/* ===== SECCIONES GENERALES ===== */
+.about,.education,.projects,.contact{background:var(--card);margin:1rem 0;padding:1.25rem;border-radius:12px;box-shadow:0 6px 20px rgba(12,38,63,0.06)}
+.section-title{display:flex;align-items:center;gap:.75rem;margin:0 0 .75rem;justify-content:center}
+.section-title h3{margin:0}
+
+/* Chips: palabras clave con estilo de etiqueta */
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.chip{background:linear-gradient(90deg,rgba(108,99,255,0.08),rgba(0,194,168,0.06));padding:.4rem .6rem;border-radius:999px;font-weight:700;color:var(--accent);border:none;box-shadow:0 6px 18px rgba(108,99,255,0.04)}
+
+/* Logos de habilidades: alineación y tamaño */
+.skill-logos{display:flex;gap:1rem;justify-content:center;align-items:center;margin-top:.5rem}
+.skill-logo{width:64px;height:64px;object-fit:contain;border-radius:8px;padding:.35rem;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.6));box-shadow:0 8px 18px rgba(15,76,129,0.06);transition:transform .18s ease,box-shadow .18s ease}
+.skill-logo:hover{transform:translateY(-6px) scale(1.04);box-shadow:0 18px 40px rgba(108,99,255,0.12)}
+
+/* ===== GRID DE PROYECTOS ===== */
+ .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;justify-items:center}
+ .project{border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#fff,#fbfdff);position:relative;max-width:360px;margin:0 auto;text-align:center;transition:transform .25s ease,box-shadow .25s ease}
+.project::after{content:"";position:absolute;left:0;right:0;top:0;height:100%;background:linear-gradient(180deg,rgba(108,99,255,0.06),transparent 45%);pointer-events:none;opacity:0;transition:opacity .22s ease}
+.project:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(15,76,129,0.08)}
+.project:hover::after{opacity:1}
+.project:hover img{transform:scale(1.03);transition:transform .35s ease}
+.project img{width:100%;height:160px;object-fit:cover;display:block}
+ .project-body{padding:1rem;text-align:left}
+.project h4{margin:.25rem 0 .4rem}
+.project p{color:var(--muted);margin:0 0 .6rem}
+ .project .links{display:flex;gap:.5rem;justify-content:flex-start}
+.btn{display:inline-block;padding:.45rem .75rem;border-radius:8px;text-decoration:none;font-weight:700}
+.btn-outline{border:1px solid rgba(15,76,129,0.12);color:var(--accent)}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;transition:transform .18s ease,box-shadow .18s ease}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,194,168,0.12)}
+.project:hover{transform:translateY(-6px);transition:transform .22s ease}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+ /* Form container centered; actual grid applied al fieldset (las entradas están dentro del fieldset) */
+  .contact-form{margin:0 auto;max-width:860px;width:100%;display:block}
+
+/* Asegurar que el contenedor de la sección de contacto centre su contenido */
+.contact{display:flex;flex-direction:column;align-items:center}
+.contact > .contact-form{width:100%;max-width:860px}
+.contact .contact-form fieldset{width:100%;max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:.6rem;justify-items:center}
+.contact-form label{font-weight:600;color:var(--muted);font-size:.9rem}
+ /* Campos de entrada con gradiente sutil. Se limita el ancho y se centran dentro de cada celda */
+  .contact-form input,.contact-form textarea{padding:.7rem;border:1px solid #e6eef6;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);width:100%;max-width:420px;justify-self:center}
+ .contact-form textarea{grid-column:1/3;max-width:860px}
+.contact-form button{grid-column:1/3;justify-self:center;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:8px;border:none;cursor:pointer}
+
+/* ===== PIE DE PÁGINA ===== */
+.site-footer{padding:1.25rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+.site-footer a{color:var(--accent);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+
+/* ===== MEDIA QUERIES: Responsivo ===== */
+/* Tablet (900px y menor) */
+@media (max-width:900px){
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-form{grid-template-columns:1fr}
+}
+
+/* Móvil (720px y menor) */
+@media (max-width:720px){
+  .hero{flex-direction:column;text-align:center}
+  .header-inner{flex-direction:column;gap:.5rem}
+  .projects-grid{grid-template-columns:1fr}
+  .hero h2{font-size:1.5rem}
+  /* Mostrar botón de menú y esconder lista por defecto */
+  .nav-toggle{display:block}
+  .site-header{position:relative}
+  .nav-list{display:none;position:absolute;top:72px;right:1.25rem;flex-direction:column;gap:.5rem;padding:.75rem;background:var(--card);border-radius:10px;box-shadow:0 10px 30px rgba(12,38,63,0.08);min-width:180px}
+  .nav-list.open{display:flex}
+  .nav-list a{padding:.6rem 1rem}
+  /* En móvil, centrar el contenido de las tarjetas */
+  .project-body{padding:1rem;text-align:center}
+  .project .links{justify-content:center}
+  /* Ajustar iconos de habilidades en móvil */
+  .skill-logo{width:52px;height:52px}
+}
+
